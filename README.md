@@ -1,6 +1,5 @@
 # pyclass_course
 <<<<<<< HEAD
-changes done to README.md
 change done to README.md
 =======
 change done to README.md
