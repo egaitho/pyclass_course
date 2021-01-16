@@ -1,0 +1,21 @@
+$ git commit -m "adding 3 files"
+[master fe3b0c3] adding 3 files
+ 3 files changed, 7 insertions(+)
+ create mode 100644 class1/exersices/file1.py
+ create mode 100644 class1/exersices/file2.py
+ create mode 100644 class1/exersices/file3.py
+(py3_venv) [egaitho@pylab24b pyclass_course]$ git status 
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+$ git push origin master 
+Username for 'https://github.com':                        
+Password for 'https://egaitho@github.com':                                    
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 593 bytes | 593.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/egaitho/pyclass_course
+   2e17435..fe3b0c3  master -> master

@@ -1,0 +1,84 @@
+$ git branch
+* master
+
+$ git checkout -b test
+Switched to a new branch 'test'
+
+$ git branch
+  master
+* test
+
+$ git status 
+On branch test
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+    dir1/
+    dir2/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git commit -m "adding two directories with a file each"
+[test 6116d35] adding two directories with a file each
+ 2 files changed, 8 insertions(+)
+ create mode 100644 dir1/file4.py
+ create mode 100644 dir2/file5.py
+
+$ git log
+commit 6116d35495bcda9eba8b51adcf84ab1306850f06 (HEAD -> test)
+Author: Erick Cantona <eq2345@hotmail.com>
+Date:   Fri Jan 15 18:06:00 2021 -0800
+
+    adding two directories with a file each
+
+commit fe3b0c301b93a7e26b3f6ac676627847ba74efbc (origin/master, origin/HEAD, master)
+Author: Erick Cantona <eq2345@hotmail.com>
+Date:   Fri Jan 15 17:44:26 2021 -0800
+
+    adding 3 files
+
+commit 2e17435542cd00f7d309e3d3427adcf2727aec3c
+Author: egaitho <55138742+egaitho@users.noreply.github.com>
+Date:   Sat Jan 16 02:16:06 2021 +0100
+
+$ git diff
+diff --git a/dir2/file5.py b/dir2/file5.py
+index a645069..3046829 100644
+--- a/dir2/file5.py
++++ b/dir2/file5.py
+@@ -4,3 +4,4 @@ if a:
+ else:
+     print("I'm sad")
+ 
++print("Hello World!")
+
+$ git commit -m "some changes to file5.py"
+[test ee6e1ba] some changes to file5.py
+ 1 file changed, 1 insertion(+)
+
+
+
+
+
+    Initial commit
+
+$ git log
+commit 6116d35495bcda9eba8b51adcf84ab1306850f06 (HEAD -> test)
+Author: Erick Cantona <eq2345@hotmail.com>
+Date:   Fri Jan 15 18:06:00 2021 -0800
+
+    adding two directories with a file each
+
+commit fe3b0c301b93a7e26b3f6ac676627847ba74efbc (origin/master, origin/HEAD, master)
+Author: Erick Cantona <eq2345@hotmail.com>
+Date:   Fri Jan 15 17:44:26 2021 -0800
+
+    adding 3 files
+
+commit 2e17435542cd00f7d309e3d3427adcf2727aec3c
+Author: egaitho <55138742+egaitho@users.noreply.github.com>
+Date:   Sat Jan 16 02:16:06 2021 +0100
+
+    Initial commit
+
+
+
