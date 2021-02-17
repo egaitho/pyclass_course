@@ -1,0 +1,20 @@
+
+{% for var in my_var %} 
+vrf definition {{var.vrf_name}}
+ rd {{var.route_distinguisher}}
+ !
+ {%- if var.ipv4_enabled is defined %}
+ address-family ipv4
+  route-target export 100:1
+  route-target import 100:1
+ exit-address-family
+ !
+ {%- endif %}
+ {%- if var.ipv6_enabled is defined %}
+ address-family ipv6
+  route-target export 100:1
+  route-target import 100:1
+ exit-address-family
+ !
+ {%- endif %}
+ {%- endfor %}
