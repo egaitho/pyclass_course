@@ -10,8 +10,8 @@ interface = "Ethernet1/1"
 nxos1 = {"interface":interface,"ip_address":"10.1.100.1","ipv4_mask":24}
 nxos2 = {"interface":interface,"ip_address":"10.1.100.2","ipv4_mask":24}
 
-import ipdb
-ipdb.source()
+#import ipdb
+#ipdb.source()
 for my_var in (nxos1,nxos2):
     my_temp = env.get_template("jinja2ex2a.j2")
     output = my_temp.render(**my_var)
